@@ -14,3 +14,7 @@ var singleShelter = function(shelter) {
   message.media(shelter.imageUrl);
   return resp;
 };
+
+module.exports.notFound = notFound;
+
+module.exports.singleShelter = singleShelter;
