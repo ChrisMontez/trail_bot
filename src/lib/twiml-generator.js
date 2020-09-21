@@ -11,7 +11,6 @@ var singleShelter = function(shelter) {
   var resp = new MessagingResponse();
   var message = resp.message();
   message.body(`${shelter.name}\n${shelter.notes}\n${shelter.lat}`);
-  message.media(shelter.imageUrl);
   return resp;
 };
 
