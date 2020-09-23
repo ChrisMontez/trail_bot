@@ -18,13 +18,6 @@ router.post('/search', function(req, res, next) {
 	var body = req.body.Body;
 	res.type('text/xml');
 
-
-
-
-
-
-
-
 	shelterFinder.findByName(body, function(err, shelters) {
 		if (shelters.length === 0) {
 			res.send(twimlGenerator.notFound().toString()); 
@@ -32,20 +25,6 @@ router.post('/search', function(req, res, next) {
 			res.send(twimlGenerator.singleShelter(shelters[0]).toString());
 		}
 	})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	console.log(from)
 	console.log(body)

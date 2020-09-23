@@ -8,6 +8,7 @@ var notFound = function() {
   return resp;
 };
 
+
 var singleShelter = function(shelter) {
   var resp = new MessagingResponse();
   var message = resp.message();
