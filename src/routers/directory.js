@@ -1,13 +1,16 @@
-const express = require ('express');
-const router = express.Router();
-const twilio = require('twilio')
-const shelterFinder = require('../lib/shelter-finder');
-const twimlGenerator = require('../lib/twiml-generator');
+'use strict';
+
+
+var express = require ('express');
+var router = express.Router();
+var twilio = require('twilio')
+var shelterFinder = require('../lib/shelter-finder');
+var twimlGenerator = require('../lib/twiml-generator');
 
 
 
 
-const bodyParser = require('body-parser')
+var bodyParser = require('body-parser')
 router.use(bodyParser.urlencoded({extended:false}))
 
 
