@@ -5,7 +5,7 @@ var MessagingResponse = require('twilio').twiml.MessagingResponse
 var notFound = function() {
   var resp = new MessagingResponse();
   resp.message('Beep Boop. Sorry, I did not find the shelter you are looking for. Check your spelling'  
-  + ' and try again. Be sure that the word "shelter" is not included in your text.');
+  + ' and try again. Be sure that the word "shelter" is not included in your text. My code is garbage so this will break me.');
   return resp;
 };
 
