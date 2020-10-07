@@ -1,6 +1,6 @@
 'use strict';
-
 var MessagingResponse = require('twilio').twiml.MessagingResponse
+const request = require("request")
 
 var notFound = function() {
   var resp = new MessagingResponse();
@@ -22,15 +22,40 @@ var singleShelter = function(shelter) {
   return resp;
 };
 
-var sendWeather = function(weather) {
+var sendWeather = function(shelter, callback) {
+
+  const resp = new MessagingResponse();
+  var message = resp.message();
+  var url = `https://api.openweathermap.org/data/2.5/onecall?lat=${shelter.lat}&lon=${shelter.lon}&
+             %20exclude=hourly,daily&units=imperial&appid=1f9a85ae0301e9988c9e14ba3ac50022`
+  var getWeather = request(url, (error, response, body) => {
+  const data = JSON.parse(body)
+  callback();
+
+  })
+
+
+
+
+    // var resp = new MessagingResponse();
+    // var message = resp.message();
+    // message.body(`${body}`);
+    // console.log(getWeather)
+    // return resp;
+};
+
+
+
+var sendWeather2 = function () {
   var resp = new MessagingResponse();
   var message = resp.message();
-console.log('test')
-  message.body(`${weather.temp}`);
-
+    console.log(data.current.temp)
+  message.body(`${data.current.temp}`);
   return resp;
-};
+}
+
 
 module.exports.notFound = notFound;
 module.exports.singleShelter = singleShelter;
 module.exports.sendWeather = sendWeather;
+module.exports.sendWeather2 = sendWeather2;
