@@ -26,6 +26,7 @@ router.post('/search', function(req, res, next) {
 
 			weather.findWeather(shelters[0], (error, data) => {
 				console.log(data.temp)
+				res.send(twimlGenerator.sendWeather2(data.temp).toString());
 			})
 
 

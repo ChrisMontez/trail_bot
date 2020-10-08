@@ -12,7 +12,8 @@ var findWeather = function (shelter, callback) {
 	// console.log(data)
 
 	callback(undefined, {
-		weatherdata: data
+		data: data,
+		temp: data.current.temp
 
 	})
 	
