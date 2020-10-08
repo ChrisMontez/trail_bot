@@ -10,7 +10,7 @@ var findWeather = function (shelter, callback) {
 
 	const data = JSON.parse(body)
 
-console.log(data.current.weather[0].description)
+
 	callback(undefined, {
 		data: data,
 		description: data.current.weather[0].description,
