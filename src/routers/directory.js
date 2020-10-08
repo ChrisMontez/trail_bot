@@ -5,7 +5,8 @@ var router = express.Router();
 var twilio = require('twilio')
 var shelterFinder = require('../lib/shelter-finder');
 var twimlGenerator = require('../lib/twiml-generator');
-// var weather = require('../lib/weather');
+var weather = require('../lib/weather');
+
 const request = require("request")
 
 
@@ -17,21 +18,19 @@ router.post('/search', function(req, res, next) {
 	var body = req.body.Body;
 	res.type('text/xml');
 
-	shelterFinder.findByName(body, function(err, shelters, sendWeather2) {
+	shelterFinder.findByName(body, function(err, shelters) {
 
 		if (shelters.length === 0) {
 			res.send(twimlGenerator.notFound().toString()); 
 		} else if (shelters.length === 1) { 
-				// const url = `https://api.openweathermap.org/data/2.5/onecall?lat=
-				// ${shelters[0].lat}&lon=${shelters[0].lon}&%20exclude=hourly,daily
-				// &units=imperial&appid=1f9a85ae0301e9988c9e14ba3ac50022`
-				// request(url, (error, response, body) => {
-				// 	const data = JSON.parse(body)
-				// 	console.log(data.current)
-				// 	})
 
-		// weather.findWeather(shelters[0])
-			res.send(twimlGenerator.sendWeather(shelters[0],sendWeather2));
+			weather.findWeather(shelters[0], (error, data) => {
+				console.log(data.temp)
+			})
+
+
+
+			// res.send(twimlGenerator.sendWeather2(shelters[0]).toString());
 			// res.send(twimlGenerator.singleShelter(shelters[0]).toString());
 		}
 				
