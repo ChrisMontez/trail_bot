@@ -9,11 +9,15 @@ var findWeather = function (shelter, callback) {
 	var getWeather = request(url, (error, response, foo) => {
 
 	const data = JSON.parse(foo)
-	// console.log(data)
+
 
 	callback(undefined, {
 		data: data,
-		temp: data.current.temp
+		temp: data.current.temp,
+		pressure: data.current.pressure,
+		humidity: data.current.humidity,
+		dew_point: data.current.dew_point,
+		wind_speed: data.current.wind_speed
 
 	})
 	

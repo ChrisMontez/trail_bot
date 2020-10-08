@@ -31,7 +31,7 @@ var sendWeather = function(shelter, data) {
   const data = JSON.parse(body)
   var resp = new MessagingResponse();
   var message = resp.message();
-  message.body(`${data.temp}`);
+  message.body(( `${data}`));
   // console.log(data.current)
 
   })
@@ -45,7 +45,8 @@ var sendWeather2 = function (data) {
   // weather.findWeather(shelter)
   var resp = new MessagingResponse();
   var message = resp.message();
-  message.body(`${data}`);
+  message.body('Temp: ' + `${data.temp}` +'\n'
+    + 'Pressure: ' + `${data.pressure}` );
   return resp;
 
 
