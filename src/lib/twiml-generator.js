@@ -46,7 +46,21 @@ var sendWeather2 = function (data) {
   var resp = new MessagingResponse();
   var message = resp.message();
   message.body('Temp: ' + `${data.temp}` +'\n'
-    + 'Pressure: ' + `${data.pressure}` );
+    + 'Pressure: ' + `${data.pressure}` + '\n' 
+    + 'Humidity: ' + `${data.humidity}` + '\n' 
+    + 'Dew Point: ' + `${data.dew_point}` + '\n' 
+    + 'Wind Speed: ' + `${data.wind_speed}` 
+
+
+
+
+
+
+
+
+
+
+    );
   return resp;
 
 
