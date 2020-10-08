@@ -45,7 +45,8 @@ var sendWeather2 = function (data) {
   // weather.findWeather(shelter)
   var resp = new MessagingResponse();
   var message = resp.message();
-  message.body('Temp: ' + `${data.temp}` +'\xB0' + 'F' +'\n'
+  message.body('Description: ' + `${data.description}` +'\n'
+     + 'Temp: ' + `${data.temp}` +'\xB0' + 'F' +'\n'
     + 'Pressure: ' + `${data.pressure}` + ' hPa' + '\n' 
     + 'Humidity: ' + `${data.humidity}` + '%' + '\n' 
     + 'Dew Point: ' + `${data.dew_point}` +'\xB0' + 'F' +'\n'
