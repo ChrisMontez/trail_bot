@@ -48,6 +48,7 @@ var sendWeather2 = function (data) {
   message.body(
       'Currently:'  + '\n' 
     +'Description: ' + `${data.description}`.charAt(0).toUpperCase()  + `${data.description}`.slice(1) +'\n'
+ // + 'Chance of rain: '  + `${data.pop565}`*100 + '%' + '\n'
     + 'Temp: ' + `${data.temp}` +' \xB0' + 'F' +'\n'
     + 'Pressure: ' + `${data.pressure}` + ' hPa' + '\n' 
     + 'Humidity: ' + `${data.humidity}` + '%' + '\n' 
@@ -100,7 +101,7 @@ var sendWeather2 = function (data) {
 
 
 
-
+//
 
 }
 
