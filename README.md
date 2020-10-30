@@ -9,3 +9,8 @@ trail_bot is a tool made for hikers of the Appalachian Trail. When a SMS message
 
 This bot leverages Twilio, NodeJs, and MongoDB to bypass the end-users need for internet connection when retrieving weather data. 
 
+
+-----To-Do-----
+-Push to Heroku
+-Add any missing shelters to database
+-Hide OWID
