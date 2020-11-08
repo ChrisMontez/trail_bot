@@ -1,7 +1,7 @@
 # trail_bot
 
 
-## Purpose
+:thought_balloon: ## Background 
 Appalachian hikers often find themselves in need of weather data at locations with no access to internet. This application was created to send the hiker their desired data without requiring them to have internet connection. 
 
 ## Description
@@ -14,6 +14,6 @@ This bot leverages Twilio, NodeJs, and MongoDB to bypass the end-users need for 
 
 
 ## Work to be done
-*Push to Heroku
-*Add any missing shelters to database
-*Hide OWID
+* Push to Heroku
+* Add any missing shelters to database
+* Hide OWID
