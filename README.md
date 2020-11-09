@@ -11,7 +11,7 @@ When a SMS message containing an Appalachian trail-shelter is sent to 256-598-99
 This bot leverages Twilio, NodeJs, and MongoDB to bypass the end-users need for internet connection when retrieving weather data. Currently in pre-deployment. Local port is tunneled by ngrok. If message is sent and a response is not recieved, that means I have the tunnel offline.
 
 
-## :light_bulb:Work to be done
+## :bulb:Work to be done
 * Push to Heroku
 * Add any missing shelters to database
 * Hide OWID
