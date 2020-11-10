@@ -9,7 +9,7 @@ var notFound = function() {
   + ' and try again. Be sure that the word "shelter" is not included in your text.');
   return resp;
 };
-
+ 
 
 var singleShelter = function(shelter) {
   var resp = new MessagingResponse();

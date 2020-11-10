@@ -9,7 +9,7 @@ var findWeather = function (shelter, callback) {
 	var getWeather = request(url, (error, response, body) => {
 
 	const data = JSON.parse(body)
-
+ 
 
 	callback(undefined, {
 		data: data,

@@ -10,4 +10,4 @@ var findByName = function(name, callback) {
 	};
 
 
-module.exports.findByName = findByName;
+module.exports.findByName = findByName; 

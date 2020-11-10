@@ -14,4 +14,4 @@ This bot leverages Twilio, NodeJs, and MongoDB to bypass the end-users need for 
 ## :bulb: Work to be done
 * Push to Heroku
 * Add any missing shelters to database
-* Hide OWID
+* Hide OWID 
