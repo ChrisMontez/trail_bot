@@ -8,7 +8,6 @@ When a SMS message containing a trail-shelter is sent to trail_bot, it responds 
 
 
 ## :wrench: Progress
-This bot leverages Twilio, NodeJs, and MongoDB to bypass the end-users need for internet connection when retrieving weather data. 
 <img src = "img/demo_1.jpg">
 <img src = "img/demo_2.jpg">
 
