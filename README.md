@@ -2,17 +2,17 @@
 
 
 ## :thought_balloon: Background 
-Appalachian hikers often find themselves in need of weather data at locations with no access to internet. This application was created to send the hiker their desired data without requiring them to have internet connection. 
-When a SMS message containing an Appalachian trail-shelter is sent to 256-598-9937, the bot responds with the current weather data and a three-day forecast for that shelter. 
+Appalachian hikers often find themselves in need of weather data at locations with no access to internet. This application allows hikers to recieve the information they require using their mobile network connection rather than the internet.
+When a SMS message containing a trail-shelter is sent to trail_bot, it responds with the current weather data and a three-day forecast at the shelters location. 
 
 
 
 ## :wrench: Progress
-This bot leverages Twilio, NodeJs, and MongoDB to bypass the end-users need for internet connection when retrieving weather data. Currently in pre-deployment. Local port is tunneled by ngrok. If message is sent and a response is not recieved, that means I have the tunnel offline.
-<img src = "img/demo_1.jpg" width="500">
+This bot leverages Twilio, NodeJs, and MongoDB to bypass the end-users need for internet connection when retrieving weather data. 
+<img src = "img/demo_1.jpg">
 <img src = "img/demo_2.jpg">
 
 
 ## :bulb: Work to be done
-* Push to Heroku
+* Push to Heroku so that access is open to everybody
 * Add any missing shelters to database
