@@ -32,7 +32,7 @@ var sendWeather = function(shelter, data) {
   var resp = new MessagingResponse();
   var message = resp.message();
   message.body(( `${data}`));
-  // console.log(data.current)
+
 
   })
 
@@ -42,13 +42,13 @@ var sendWeather = function(shelter, data) {
 
 
 var sendWeather2 = function (data) {
-  // weather.findWeather(shelter)
+
   var resp = new MessagingResponse();
   var message = resp.message();
   message.body(
       'Currently:'  + '\n' 
     +'Description: ' + `${data.description}`.charAt(0).toUpperCase()  + `${data.description}`.slice(1) +'\n'
- // + 'Chance of rain: '  + `${data.pop565}`*100 + '%' + '\n'
+
     + 'Temp: ' + `${data.temp}` +' \xB0' + 'F' +'\n'
     + 'Pressure: ' + `${data.pressure}` + ' hPa' + '\n' 
     + 'Humidity: ' + `${data.humidity}` + '%' + '\n' 
@@ -101,7 +101,7 @@ var sendWeather2 = function (data) {
 
 
 
-//
+
 
 }
 

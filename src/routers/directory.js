@@ -25,15 +25,13 @@ router.post('/search', function(req, res, next) {
 		} else if (shelters.length === 1) { 
 
 			weather.findWeather(shelters[0], (error, data) => {
-				// console.log(data.temp)
-				// console.log(data.pressure)
+
 				res.send(twimlGenerator.sendWeather2(data).toString() );
 			})
 
  
 
-			// res.send(twimlGenerator.sendWeather2(shelters[0]).toString());
-			// res.send(twimlGenerator.singleShelter(shelters[0]).toString());
+
 		}
 				
 	})
